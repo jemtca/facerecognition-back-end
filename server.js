@@ -24,9 +24,10 @@ const db = knex({
   // heroku
   // connection : {
   //   connectionString: process.env.DATABASE_URL,
-  //   ssl: true
+  //   ssl: {
+  //     rejectUnauthorized: false
+  //   }
   // }
-  
 });
 
 const app = express();
