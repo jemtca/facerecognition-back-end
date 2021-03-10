@@ -1,4 +1,3 @@
-
 # FaceRecognition Project
 Repository to upload the facerecognition project (back-end) and explain how to run it on **macOS**.
 
@@ -9,8 +8,8 @@ Repository to upload the facerecognition project (back-end) and explain how to r
 * Install dependencies/packages: **`npm install`**
 * Run the app: **`npm start`**
 
-## How to create a database (postgresql)
-* Install postgresql using brew: **`brew install postgresql`**
+## How to install postgresql (using Homebrew) and create a database
+* Install postgresql: **`brew install postgresql`**
 * Start postgresql: **`brew services start postgresql`**
 * Create a database: **`createdb 'facerecognition'`**
 * Connect to the database: **`psql 'facerecognition'`**
