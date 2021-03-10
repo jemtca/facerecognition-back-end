@@ -11,6 +11,7 @@ const image = require('./controllers/image');
 
 // heroku
 const PORT = process.env.PORT || 3000;
+const DATABASE_URL = process.env.DATABASE_URL || 'facerecognition';
 
 const db = knex({
   client: 'pg',
@@ -19,11 +20,11 @@ const db = knex({
     host : '127.0.0.1',
     user : '',
     password : '',
-    database : 'facerecognition'
+    database : DATABASE_URL
   }
   // heroku
   // connection : {
-  //   connectionString: process.env.DATABASE_URL,
+  //   connectionString: DATABASE_URL,
   //   ssl: {
   //     rejectUnauthorized: false
   //   }
