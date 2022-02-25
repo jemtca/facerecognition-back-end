@@ -17,7 +17,8 @@ const handleRegister = (req, res, db, bcrypt) => {
 			.then(loginEmail => {
 					return trx.insert({ // return must be used to make commit statement works
 						name: name,
-						email: loginEmail[0],
+						// email: loginEmail[0],
+						email: loginEmail[0].email,
 						joined: new Date(), 
 					})
 					.into('users')

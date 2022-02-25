@@ -6,6 +6,7 @@ const app = new Clarifai.App({
 	// apiKey: process.env.API_KEY
 	// localhost
  	apiKey: 'your_personal_clarifai_api_key'
+ 	
 });
 
 const handleApiCall = (req, res) => {
@@ -28,7 +29,8 @@ const handleImage = (req, res, db) => {
 		.increment('entries', faces)
 		.returning('entries')
 		.then(entries => {
-			res.json(entries[0])
+			// res.json(entries[0])
+			res.json(entries[0].entries)
 		})
 		.catch(error => {
 			res.status(400).json('unable to get entries');
